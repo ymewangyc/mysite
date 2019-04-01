@@ -1,0 +1,9 @@
+admin  yme1217!
+依赖文件生成
+pip freeze > requirements.txt
+依赖文件安装
+pip install -r requirement.txt
+
+virtualenv mysite_env 安装虚拟环境
+
+导入本地虚拟环境找到python.exe D:\mysite_env\Scripts\python.exe ,导入就可以了
