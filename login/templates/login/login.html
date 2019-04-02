@@ -1,31 +1,40 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 {% block title %}登录{% endblock %}
-{#{% block css %}<link href="{% static 'css/login.css' %}" rel="stylesheet"/>{% endblock %}#}
+{% block css %}<link href="{% static 'css/login.css' %}" rel="stylesheet"/>{% endblock %}
 
-{% block css %}<link href="{% static 'css/login.css' %}" rel="stylesheet" />{% endblock %}
 
 {% block content %}
     <div class="container">
         <div class="col-md-4 col-md-offset-4">
           <form class='form-login' action="/login/" method="post">
 
-              {%  if message %}
+              {% if message %}
                   <div class="alert alert-warning">{{ message }}</div>
-              {%  endif %}
-
-              {% csrf_token %}  {#  TODO: CSRF 验证失败，form下面添加该标签 #}
+              {% endif %}
+              {% csrf_token %}
               <h2 class="text-center">欢迎登录</h2>
-              <div class="form-group">
-                <label for="id_username">用户名：</label>
-                <input type="text" name='username' class="form-control" id="id_username" placeholder="Username" autofocus required>
-              </div>
-              <div class="form-group">
-                <label for="id_password">密码：</label>
-                <input type="password" name='password' class="form-control" id="id_password" placeholder="Password" required>
-              </div>
+
+{#              {{ login_form }}#}
+                <div class="form-group">
+                    {{ login_form.username.label_tag }}
+                    {{ login_form.username }}
+                </div>
+                <div class="form-group">
+                    {{ login_form.password.label_tag }}
+                    {{ login_form.password }}
+                </div>
+                <div class="form-group">
+                    {{ login_form.captcha.errors }}
+                    {{ login_form.captcha.label_tag }}
+                    {{ login_form.captcha }}
+                </div>
+              <tr><th><label for="id_username">用户名:</label></th><td><input type="text" name="username" value="jack" maxlength="128" required id="id_username" /></td></tr>
+              <tr><th><label for="id_password">密码:</label></th><td><input type="password" name="password" maxlength="256" required id="id_password" /></td></tr>
+
               <button type="reset" class="btn btn-default pull-left">重置</button>
               <button type="submit" class="btn btn-primary pull-right">提交</button>
+
           </form>
         </div>
     </div> <!-- /container -->
