@@ -1,0 +1,40 @@
+history
+history /?
+doskey /history
+d:
+cd pyenv
+virtualenv --no-site-packages mysite_env
+pip install virtualenv
+virtualenv --no-site-packages mysite_env
+tree
+dir
+cd mysite_env
+dir
+Scripts\activate
+python
+pip install django-1.11.7
+pip install django-1.11
+pip install django
+pip uninstall django
+pip install django==1.11.7
+pip install python==3.6.1
+cd ..
+cd mysite
+dir
+python -v
+python -V
+where python
+dir
+cd ..
+cd mysite
+dir
+tree
+tree *
+tree /?
+tree /F
+doskey /history
+doskey /history > history.txt
+dir
+python manage.py startapp login
+dir
+doskey /history >> history.txt
