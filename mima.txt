@@ -7,3 +7,7 @@ pip install -r requirement.txt
 virtualenv mysite_env 安装虚拟环境
 
 导入本地虚拟环境找到python.exe D:\mysite_env\Scripts\python.exe ,导入就可以了
+
+ymewangyc
+
+ymewangyc1215
