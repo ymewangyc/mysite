@@ -1,4 +1,5 @@
 from django import forms
+from captcha.fields import CaptchaField
 from . import models
 #
 # class UserForm(forms.ModelForm):
@@ -10,9 +11,20 @@ from . import models
 #         super(UserForm,self).__init__(*args,*kwargs)
 #         self.fields['name'].label = '用户名'
 #         self.fields['password'].label = '密码'
-
-
+#
 class UserForm(forms.Form):
     username = forms.CharField(label="用户名", max_length=128,widget=forms.TextInput(attrs={'class': 'form-control'}))
     password = forms.CharField(label="密码", max_length=256, widget=forms.PasswordInput(attrs={'class': 'form-control'}))
+    captcha = CaptchaField(label='验证码')    #//TODO:关于captcha的功能，当然绝不仅限于此，你可以设置六位、八位验证码，可以对图形噪点的生成模式进行定制，这些就留待你自己学习和研究了。
 
+
+#//TODO:实战1-7 五、ModelForm 使用 http://www.liujiangblog.com/course/django/109
+# class UserForm(forms.ModelForm):
+#     class Meta:
+#         model = models.User
+#         fields = ['name', 'password']
+#
+#     def __init__(self, *args, **kwargs):
+#         super(UserForm, self).__init__(*args, *kwargs)
+#         self.fields['name'].label = '用户名'
+#         self.fields['password'].label = '密码'
