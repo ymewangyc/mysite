@@ -11,7 +11,7 @@ class User(models.Model):
 
     name = models.CharField(max_length=128,unique=True)
     password = models.CharField(max_length=256)
-    emaile = models.EmailField(unique=True)
+    email = models.EmailField(unique=True)
     sex = models.CharField(max_length=32,choices=gender,default="男")
     c_time= models.DateTimeField(auto_now_add=True)   #创建时间
 
