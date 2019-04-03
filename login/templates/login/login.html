@@ -15,22 +15,20 @@
               {% csrf_token %}
               <h2 class="text-center">欢迎登录</h2>
 
-{#              {{ login_form }}#}
-                <div class="form-group">
-                    {{ login_form.username.label_tag }}
-                    {{ login_form.username }}
-                </div>
-                <div class="form-group">
-                    {{ login_form.password.label_tag }}
-                    {{ login_form.password }}
-                </div>
-                <div class="form-group">
-                    {{ login_form.captcha.errors }}
-                    {{ login_form.captcha.label_tag }}
-                    {{ login_form.captcha }}
-                </div>
-              <tr><th><label for="id_username">用户名:</label></th><td><input type="text" name="username" value="jack" maxlength="128" required id="id_username" /></td></tr>
-              <tr><th><label for="id_password">密码:</label></th><td><input type="password" name="password" maxlength="256" required id="id_password" /></td></tr>
+              {{ login_form }}
+{#                <div class="form-group">#}
+{#                    {{ login_form.username.label_tag }}#}
+{#                    {{ login_form.username }}#}
+{#                </div>#}
+{#                <div class="form-group">#}
+{#                    {{ login_form.password.label_tag }}#}
+{#                    {{ login_form.password }}#}
+{#                </div>#}
+{#                <div class="form-group">#}
+{#                    {{ login_form.captcha.errors }}#}
+{#                    {{ login_form.captcha.label_tag }}#}
+{#                    {{ login_form.captcha }}#}
+{#                </div>#}
 
               <button type="reset" class="btn btn-default pull-left">重置</button>
               <button type="submit" class="btn btn-primary pull-right">提交</button>
