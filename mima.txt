@@ -1,4 +1,4 @@
-admin  yme1217!
+﻿admin  yme1217!
 依赖文件生成
 pip freeze > requirements.txt
 依赖文件安装
@@ -7,3 +7,5 @@ pip install -r requirement.txt
 修改数据相关代码后，重新生成数据库文件
 python  manage.py  makemigrations
 python manage.py migrate login
+
+test
