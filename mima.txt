@@ -7,5 +7,3 @@ pip install -r requirement.txt
 修改数据相关代码后，重新生成数据库文件
 python  manage.py  makemigrations
 python manage.py migrate login
-
-test
