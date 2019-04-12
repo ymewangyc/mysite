@@ -20,6 +20,7 @@ class User(models.Model):
         return self.name
 
     class Meta:
+        app_label = 'login'
         ordering = ["-c_time"]
         verbose_name = "用户"
         verbose_name_plural = "用户"

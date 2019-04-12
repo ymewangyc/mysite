@@ -26,7 +26,7 @@ def login(request):
     if request.method == "POST":
         login_form = forms.UserForm(request.POST)
         message = "请检查填写的内容！"
-        print(login_form)
+        # print(login_form)
         if login_form.is_valid():
             username = login_form.cleaned_data['username']
             password = login_form.cleaned_data['password']
@@ -49,7 +49,7 @@ def login(request):
         return render(request, 'login/login.html', locals())
 
     login_form = forms.UserForm()
-    print(login_form)
+    # print(login_form)
     return render(request, 'login/login.html', locals( ))
 
 '''
